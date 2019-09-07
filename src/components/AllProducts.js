@@ -37,21 +37,21 @@ class AllProduct extends Component {
                 <th scope="col">Delete</th>
               </tr>
             </thead>
-
+            </table>
         
-<tbody>
+            </div>
         {this.props.posts.map((post) => (
           <div key={post.id}>
             {post.editing ? <EditComponent post={post} key={post.id} /> :
               <Product key={post.id} post={post} />}
           </div>
         ))}
+
         
-        </tbody>
 
-</table>
 
-</div>
+
+
 
       </div>
     );
