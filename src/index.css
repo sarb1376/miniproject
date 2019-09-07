@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.sarb{
+  float: left;
+  margin-left: 70px;
+  margin-bottom: 30px;
+}
+
+.input{
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.input[placeholder]{
+  padding: 10px;
+}
+
+#left{
+  margin-right: -140px;
+}
+
+.box{
+  border: 2px solid #ededed;
+  border-radius: 10px;
+  height: 500px;
+  margin-top: 50px;
+  /* box-shadow: 1px 1px 5px #aaaaaa; */
+  overflow: auto
+}
+
+.inbox{
+  padding: 10px;
+}
