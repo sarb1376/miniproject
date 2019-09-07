@@ -16,6 +16,7 @@ const mapStateToProps = (state) => {
 
 class AllProduct extends Component {
   render() {
+    
     return (
       <div className="container box" col="md-12">
         <div className="row inbox">
@@ -37,17 +38,18 @@ class AllProduct extends Component {
                 <th scope="col">Delete</th>
               </tr>
             </thead>
-            </table>
-        
-            </div>
-        {this.props.posts.map((post) => (
-          <div key={post.id}>
-            {post.editing ? <EditComponent post={post} key={post.id} /> :
-              <Product key={post.id} post={post} />}
-          </div>
-        ))}
 
-        
+            <tbody>
+
+              {this.props.posts.map((post) => (
+                post.editing
+                  ? <EditComponent post={post} key={post.id} />
+                  : <Product key={post.id} post={post} />
+              ))}
+            </tbody>
+
+          </table>
+        </div>
 
 
 
