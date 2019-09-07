@@ -1,38 +1,69 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// import { connect } from 'react-redux';
 
-class Search extends Component {
-  state = {
-    query: '',
-    results: []
-  }
-
-
-//   handleInputChange = (e) => {
-
-//     const name = this.search.value;
-
-//     this.setState({
-//      )
+// const mapStateToProps = (state) => {
+//     return {
+//       posts: state
+//     }
 //   }
-//   };
 
-  render() {
-    return (
-        <div>
-      <form>
-        <input
-          placeholder="Search for..."
-          ref={(input) => this.search = input}
-          onChange={this.handleInputChange}
-        />
-        {/* <Suggestions results={this.state.results} /> */}
-      </form>
-      <div>
-          <p>{this.state.results}</p>
-      </div>
-      </div>
-    )
-  }
-}
+// class Search extends Component {
+//     constructor(props) {
+//         super(props);
 
-export default Search;
+    
+//     // this.state = {
+//     //     results: []
+//     // }
+// }
+
+
+
+//     handleInputChange = (e) => {
+
+//         const value = this.search.value;
+
+//         this.props.dispatch({
+//             type: 'SEARCH',
+//             value
+//           });
+        
+
+//         // console.log(this.props.dispatch());
+
+        
+//         // const names = this.state.posts
+
+//         // return names.filter((name) => name.title == value);
+
+//         // this.setState({
+//         //     results: names.title 
+        
+//         // }
+//         // )
+// };
+
+// render() {
+//     return (
+//         <div>
+//             <form>
+//                 <input
+//                     placeholder="Search for..."
+//                     ref={(input) => this.search = input}
+//                     onChange={this.handleInputChange}
+//                 />
+//             </form>
+//             <div>
+//                 {/* <p>{this.state.results}</p> */}
+//             </div>
+//         </div>
+//     )
+// }
+// }
+
+// export default connect()(Search);
+
+
+
+
+

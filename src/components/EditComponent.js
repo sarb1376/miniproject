@@ -1,40 +1,64 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Button, Input } from 'reactstrap';
+import { connect } from 'cato-react-store';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Col, Label, FormGroup } from 'reactstrap';
+import mapping from '../mapping';
 
 
 class EditComponent extends Component {
-  handleEdit = (e) => {
-    e.preventDefault();
-    const newTitle = this.getTitle.value;
-    const newMessage = this.getMessage.value;
-    const data = {
-      newTitle,
-      newMessage
-    }
+  // handleEdit = (e) => {
+  //   e.preventDefault();
+  //   const newTitle = this.getTitle.value;
+  //   const newMessage = this.getMessage.value;
+  //   const data = {
+  //     newTitle,
+  //     newMessage
+  //   }
 
-    this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
-  }
+  //   this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
+  // }
 
 
   render() {
+
+    const { post , onHideModal , modal} = this.props;
+
     return (
       <div>
 
-        <form onSubmit={this.handleEdit}>
-
-          <input required type="text" ref={(input) => this.getTitle = input}
-            defaultValue={this.props.post.title} placeholder="Enter Post Title" className="col-md-2 input" style={{float:"left"}}/>
-
-          <input required ref={(input) => this.getMessage = input}
-            defaultValue={this.props.post.message} cols="28" placeholder="Enter Post" className="col-md-2 sarb input"/>
-
-          <Button className="col-md-2 sarb">Update</Button>
-
-        </form>
+<Modal isOpen={modal === 'add'} toggle={() => onHideModal()}>
+          <ModalHeader toggle={() => onHideModal()}>Add Product</ModalHeader>
+          <ModalBody>
+            
+                <input
+                  required type="text"
+                  defaultValue={post.title}
+                  placeholder="Enter Post Title"
+                  className="col-md-2 input"
+                  style={{ float: "left" }}
+                />
+          
+                <input required
+                 required type="text"
+                 defaultValue={post.price}
+                 placeholder="Enter Post price"
+                 className="col-md-2 input"
+                 style={{ float: "left" }}
+                  />
+        
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" /*onClick={() => onSave(product)}*/ >Post</Button>
+          </ModalFooter>
+        </Modal>
 
       </div>
     );
   }
 }
 export default connect()(EditComponent);
+
+
+
+
+
+

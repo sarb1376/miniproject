@@ -1,11 +1,11 @@
-// import {createStore} from 'redux';
-// import { PostReducer, initialState } from './postReducer'
+// import {createStore , combineReducers} from 'redux';
+// import { PostReducer } from './postReducer'
 
-// export const ConfigureStore = () => {
+// xport const ConfigureStore = () => {
 //     const store = createStore(
-//         PostReducer, // reducer
-//         initialState, // our initialState
-//     );
+//         combineReducers({
+//             posts : posts
+//         }))
 
 //     return store;
 // }
